@@ -17,12 +17,12 @@
 
 \begin{document}
 
-Pitzer MATH194 \hfill Alyssa Sawyer, HMC'26 %yourname here 
+Pitzer MATH194 \hfill Alyssa Sawyer, HMC'26  
 \\
-Experimental Mathematics \hfill  Collaborators : N/A \\
+Experimental Mathematics \hfill  \\
 Fall 2025
 \begin{center}
-{\large \bf Written (LaTeX) Assignment 0}\\
+{\large \bf Homework 1}\\
 Due Friday, September 12 on Canvas
 \end{center}
 
@@ -32,24 +32,80 @@ Due Friday, September 12 on Canvas
 \item
 We will exhibit and verify a homeomorphism between $S^1 - \{(-1,0)\}$ and $\mathbb{R}$. 
 
-a. Our homeomorphism is as follows: $f(x) = \frac{y}{x+1}$.
+Our homeomorphism is as follows: $f(x) = \frac{y}{x+1}$, where we are mapping from $S^1$ to $\mathbb{R}$.
 
-b. This is a homeomorphism. We will show that by first showing it is continuous and then proving that it has a continuous inverse.
+Now, we will prove that this is a valid homeomorphism by first showing it is continuous and then proving that it has a continuous inverse.
 
-i. It is clearly continuous since $x \neq -1$ is in $S^1 - \{(-1,0)\}$ and that is the only possible value that could cause the function to not be continuous. 
+It is clearly continuous since $x \neq -1$ is in $S^1 - \{(-1,0)\}$. 
 
-ii. Next, we can solve for the inverse by switching the variables and solving for $y$, which gives us $f^{-1}(x) = (-\frac{1-\sqrt{1+4x}}{2}, -\frac{1-\sqrt{1+4x}}{2})$. This function is also continuous, as desired.   
-% ASK: this feels wrong, how do i finish doing the inverse calculation?
+Next, we can solve for the inverse by parameterizing our equations in order to write it in terms of one variable, $t$: $t =\frac{y}{x+1}$. We can solve for $y$ and then substitute that into the unit circle equation, $x^2 + y^2 = 1$, which gives us:
+\[x^2 (t(x+1))^2 = 1\]
 
+We can expand to get the following equation:
+\[x^2(1+t^2) + x(2t^2) + (t^2 -1) = 0 \]
 
+Now, we can solve using the quadratic equation, which tells us $x= \frac{1-t^2}{1+t^2}$, considering the domain excludes $-1$. That corresponds to $y=t \frac{2}{1+t^2}$. 
+
+Thus, $f^{-1}(t) =( \frac{1-t^2}{1+t^2}, \frac{2t}{1+t^2})$
+
+This function is continuous as there is no possible point for it to be undefined. Since we were able to find a continuous inverse with the same dimension as our original space, that implies surjectivity and injectivity. Thus, we have found a homeomorphism, as desired. 
+
+\newpage
 \item Now, we will prove that $\{(x,y,z) \in \mathbb{R}^3 \mid x^2 + y^2 + z^2 = 1\}- \{(0,0,-1)\}$ is homeomorphic to $R^2$.
 
+The homeomorphism is as follows: 
+$F: (x,y,z) \mapsto (\frac{x}{z+1}, \frac{y}{z+1})$, where we are going from $S^2 - \{(0,0,-1)\}$ to $\mathbb{R}^2$. 
+
+To prove it is a homeomorphism, we will show that it is continuous, has an inverse (implies injectivity), and there is a bijection between itself and it's inverse (implies surjectivity).
+
+The function is clearly continuous as $z \neq 0$ in $\{(x,y,z) \in \mathbb{R}^3 \mid x^2 + y^2 + z^2 = 1\}- \{(0,0,-1)\}$. 
+
+We can find the inverse of this function as follows. We will use the same parameterizing approach as the previous problem. First, we will write our equation in terms of two new variables, $\bar{x}, \bar{y}$: $\bar{x} = \frac{x}{z+1}$ and $\bar{y} = \frac{y}{z+1}$. We solve for $x$ and $y$, then substitute that into the equation for the unit sphere, $x^2 + y^2 + z^2 = 1$:
+
+\[((\bar{x})(z+1))^2 + ((\bar{y})(z+1))^2 + z^2 = 1\]
+
+Then, we simplify the algebra in order to find a quadratic equation in terms of $z$:
+
+\[(\bar{x}^2 + \bar{y}^2 + 1)z^2 + (2\bar{x}^2 + 2\bar{y}^2)z + (\bar{x}^2+\bar{y}^2-1) = 0\]
 
 
-\item \S2 \#4.
-Let $A\subset X$; suppose $r\colon X\to A$ is a continuous map such that $r(a)=a$ for each $a\in A$.
-(The map $r$ is called a \emph{retraction} of $X$ onto $A$.)
-If $a_0\in A$, show that $r_*\colon \pi_1(X,a_0) \to \pi_1(A,a_0)$ is surjective.
+Solving yields us
+\[z = \frac{-\bar{x}^2 - \bar{y}^2 + 1}{\bar{x}^2 + \bar{y}^2 +1}\]
+
+Now, we can plug that back into our initial equations to get the inverse function. We have that $z+1 = \frac{2}{1 + \bar{x}^2 + \bar{y}^2 }$ and recall we defined $\bar{x}$ and $\bar{y}$ such that $x = \bar{x}{z+1}$ and $y = \bar{y}{z+1}$. Thus, we can construct the inverse equation as follows:
+
+\[f^{-1}(\bar{x}, \bar{y}) = (\bar{x}(\frac{2}{1 + \bar{x}^2 + \bar{y}^2 }), \bar{y}(\frac{2}{1 + \bar{x}^2 + \bar{y}^2 }), \frac{-\bar{x}^2 - \bar{y}^2 + 1}{\bar{x}^2 + \bar{y}^2 +1})\]
+
+This function is also clearly continuous, since there is no point at which it would become undefined. 
+
+Since we were able to find an inverse, injectivity follows, as desired.
+
+Finally, because the dimension of $S_2$ is the same as $R_2$, we know they are surjective, as we were able to find an inverse that maps between them so surjectivity follows naturally. 
+
+\newpage
+\item Next, I will define a topological invariant, provide examples, and justify those examples.
+
+
+First, a topological invariant refers to a specific property of any given topological space that does not change under homeomorphism. 
+
+Now, I will go through 3 examples and rigorous justifications for those examples.
+
+1. First, the genus is a topological invariant. In other words, the genus represents the number of times you can make circular cuts in the space without making the space disconnected.
+
+Suppose for the purposes of contradiction that there are two spaces with different genus that are 
+
+2. Second, the number of boundary components is a topological component.
+
+Suppose for the purpose of contradiction that we have two manifolds that are homeomorphic where one manifold has a boundary and one of them doesn't. By definition, they cannot be locally homeomorphic due to the difference in boundary, which means that we have generated a contradiction, as desired. Thus, the number of boundary components must be preserved under homeomorphism.  
+
+\newpage
+\item Finally, we will show that a 2-dimensional unit sphere is a topological manifold.
+
+We will do this by showing that it is locally homeomorphic to $\mathbb{R}^2$, or in other words, that $N_{p\in S^2} \cong \mathbb{R}^2$.
+
+We define our homeomorphism as follows, where we are going from any arbitrary neighborhood in $S^2$ to $\mathbb{R^2}$: $f: (x,y) \to \frac{(x, y)}{||(x,y)|| + 1}.$
+
+Now, we will show that this is a valid homeomorphism by showing that it is 1:1:, onto, and continuous.
 
 
 
