@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath,amssymb}
+\usepackage{fullpage}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{mathtools}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2ex}
+\thispagestyle{empty}
+
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\diam}{\ensuremath{\mathrm{diam}}}
+
+\begin{document}
+
+Pitzer MATH194 \hfill Alyssa Sawyer, HMC'26 %yourname here 
+\\
+Experimental Mathematics \hfill  Collaborators : N/A \\
+Fall 2025
+\begin{center}
+{\large \bf Written (LaTeX) Assignment 0}\\
+Due Friday, September 12 on Canvas
+\end{center}
+
+{\bf Solutions/Proofs.}
+\begin{enumerate}
+
+\item
+We will exhibit and verify a homeomorphism between $S^1 - \{(-1,0)\}$ and $\mathbb{R}$. 
+
+a. Our homeomorphism is as follows: $f(x) = \frac{y}{x+1}$.
+
+b. This is a homeomorphism. We will show that by first showing it is continuous and then proving that it has a continuous inverse.
+
+i. It is clearly continuous since $x \neq -1$ is in $S^1 - \{(-1,0)\}$ and that is the only possible value that could cause the function to not be continuous. 
+
+ii. Next, we can solve for the inverse by switching the variables and solving for $y$, which gives us $f^{-1}(x) = (-\frac{1-\sqrt{1+4x}}{2}, -\frac{1-\sqrt{1+4x}}{2})$. This function is also continuous, as desired.   
+% ASK: this feels wrong, how do i finish doing the inverse calculation?
+
+
+\item Now, we will prove that $\{(x,y,z) \in \mathbb{R}^3 \mid x^2 + y^2 + z^2 = 1\}- \{(0,0,-1)\}$ is homeomorphic to $R^2$.
+
+
+
+\item \S2 \#4.
+Let $A\subset X$; suppose $r\colon X\to A$ is a continuous map such that $r(a)=a$ for each $a\in A$.
+(The map $r$ is called a \emph{retraction} of $X$ onto $A$.)
+If $a_0\in A$, show that $r_*\colon \pi_1(X,a_0) \to \pi_1(A,a_0)$ is surjective.
+
+
+
+
+\end{enumerate}
+
+\end{document}
