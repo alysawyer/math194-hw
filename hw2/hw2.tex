@@ -83,20 +83,20 @@ The, we glue $g$ to $b_1$:
     \includegraphics[width=0.5\linewidth]{2-3.png} 
 \end{figure}
 
-After that, we can combine the edges, where we use a new label, $g$ to represent $e$ and $b$.
+After that, we can combine the edges, where we use a new label, $j$ to represent $e$ and $b$.
 \begin{figure}[H] 
     \centering
     \includegraphics[width=0.3\linewidth]{2-4.png} 
 \end{figure}
 
-Apply the same logic we did for the "top" of the shape to the bottom, where we divide it into two segments and attach the mobius strip that way.
+Apply the same logic we did for the "top" of the surface to the bottom, where we divide it into two segments and attach the mobius strip that way.
 
 \begin{figure}[H] 
     \centering
     \includegraphics[width=0.3\linewidth]{2-5.png} 
 \end{figure}
 
-We can continously deform the shape where $a$ essentially becomes $0$ and it is still the same shape, so we can rewrite it. 
+We can continously deform the surface where $a$ essentially becomes $0$ and it is still topologically equivalent: 
 
 \begin{figure}[H] 
     \centering
@@ -116,14 +116,14 @@ This is the Klein bottle, as desired.
 \item 
 We will determine that the surface obtained by attaching a Möbius band along the boundary of a torus with a hole. 
 
-First, we will begin by proving a lemma that will aide in the proof later. Begin with a mobius strip and Klein bottle.
+First, we will begin by proving a supplemental lemma. Begin with a mobius strip and Klein bottle with a hole.
 
 \begin{figure}[H] 
     \centering
     \includegraphics[width=0.4\linewidth]{3l-1.jpeg} 
 \end{figure}
 
-Glue them together along the boundary of the Klein bottle.
+Glue them together along the boundary of the Klein bottle, $f$.
 
 
 % \begin{figure}[H] 
@@ -138,7 +138,7 @@ This gives us the following shape when we are done gluing the Möbius band to th
     \includegraphics[width=0.3\linewidth]{3l-3.jpeg} 
 \end{figure}
 
-Then, we can cut the shape as follows to reglue it.
+Then, we can cut the shape as follows in order to reglue it along $b$.
 
 \begin{figure}[H] 
     \centering
@@ -150,7 +150,7 @@ Then, we can cut the shape as follows to reglue it.
     \includegraphics[width=0.3\linewidth]{3l-5.jpeg} 
 \end{figure}
 
-Let that be our result of the lemma for now. 
+Let the above surface be the result of our lemma. 
 
 Returning to the initial problem, we begin with our torus with a hole and our Möbius band.
 
@@ -187,9 +187,9 @@ Now, we can glue across $e$, which gives the following:
 \end{figure}
 
 
-This is clearly homeomorphic to the shape we proved in our lemma, meaning the shape we are currently at is equivalent to a Möbius band and a Klein bottle. 
+This is clearly homeomorphic to the shape we proved in our lemma, meaning the shape we are currently at is topological equivalent to the connected sum of a Möbius band and a Klein bottle. 
 
-Three projective planes are topologically equivalent to a Möbius band and a Klein bottle. That is also topologically equivalent to a Klein bottle and a projective plane, since $KB \cong P^2 \# P^2$. Thus, through proving this homeomorphism with the lemma, we have overall proved that hte surface is the connected sum of the Klein bottle and the projective plane. 
+Next, we know that three projective planes are topologically equivalent to a Möbius band and a Klein bottle. That is also topologically equivalent to a Klein bottle and a projective plane, since $KB \cong P^2 \# P^2$. Thus, through proving this homeomorphism with the lemma, we have overall proved that hte surface is the connected sum of the Klein bottle and the projective plane, $\mathbb{P^2} \# KB$.
 
 
 % TODO: maybe add something about the disk / figure out tf is going on 
@@ -206,7 +206,7 @@ For the remainder of the problems, we will be referring to the surfaces using th
     \includegraphics[width=0.5\linewidth]{4-1.jpeg} 
 \end{figure}
 
-For surfaces 1-4, calculating the genus is straightforward as it can clearly be done visually. THe genuses are as follows: surface 1 has genus 4, surface 2 has genus 4, surface 3 has genus 4, and surface 4 has genus 5. There are of course, multiple sets of cuts that can work, but to demonstrate the solution, the following cuts can be made: 
+For surfaces 1-4, calculating the genus is straightforward as it can clearly be done visually. The genuses are as follows: surface 1 has genus 4, surface 2 has genus 4, surface 3 has genus 4, and surface 4 has genus 5. There are of course, multiple sets of cuts that can work, but to demonstrate the solution, the following cuts can be made: 
 
 
 \begin{figure}[H] 
