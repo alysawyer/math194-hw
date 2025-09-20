@@ -92,11 +92,15 @@ Now, I will go through 3 examples and rigorous justifications for those examples
 
 1. First, the genus is a topological invariant. In other words, the genus represents the number of times you can make circular cuts in the space without making the space disconnected.
 
-Suppose for the purposes of contradiction that there are two spaces with different genus that are 
+From class, we are given that $\chi (s) = 2-2g-n$, where $g$ represents the genus. If two objects are homeomorphic, they must have the same $\chi$ value, since that is Euler's characteristic, which is a known invariant. $n$ represents the boundary condition, which is also a known invariant. Thus, in order for that equation to hold, if two objects have the same genus they must also have the same $\chi$ value, which implies they are homeomorphic, as desired. In converse, if they have different $\chi$ values they must have different genus values. Thus, two objects are homeomorphic if and only if they have the same genus, which is the definition of a topological invariant, as desired. 
 
 2. Second, the number of boundary components is a topological component.
 
-Suppose for the purpose of contradiction that we have two manifolds that are homeomorphic where one manifold has a boundary and one of them doesn't. By definition, they cannot be locally homeomorphic due to the difference in boundary, which means that we have generated a contradiction, as desired. Thus, the number of boundary components must be preserved under homeomorphism.  
+Suppose for the purpose of contradiction that we have two manifolds that are homeomorphic where one manifold has a boundary and one of them doesn't. By definition, they cannot be locally homeomorphic due to the difference in boundary. Supposed a extremal boundary neighborhood in the bounded manifold. There cannot be a corresponding neighborhood in the open manifold, as that would only consists of interior points. That is illogical, which means that we have generated a contradiction, as desired. Thus, the number of boundary components must be preserved under homeomorphism.  
+
+3. Finally, the last topological invarient is Euler's characteristic. 
+
+Suppose for the purposes of contradiction that there are two spaces that do not have the same Euler's characteristic but are homeomorphic. That means one of the spaces has to have a different number of verticies, edges, or faces. From what we know about homeomorphisms, it is not possible to construct a homeomorphism where one of those values is inconsistent, as it would make the relationship not bijective. Thus, Euler's characteristic must be a topological invarient, as desired.   
 
 \newpage
 \item Finally, we will show that a 2-dimensional unit sphere is a topological manifold.
@@ -105,8 +109,18 @@ We will do this by showing that it is locally homeomorphic to $\mathbb{R}^2$, or
 
 We define our homeomorphism as follows, where we are going from any arbitrary neighborhood in $S^2$ to $\mathbb{R^2}$: $f: (x,y) \to \frac{(x, y)}{||(x,y)|| + 1}.$
 
-Now, we will show that this is a valid homeomorphism by showing that it is 1:1:, onto, and continuous.
+Now, we will show that this is a valid homeomorphism by showing that it is one to one, onto, and continuous.
 
+1. First, we will prove that this function is injective. Begin by assuming two sets of inputs into this function $x_1, y_1$ and $x_2, y_2$. We begin by assuming that $f(x_1, y_1) = f(x_2, y_2)$. Plugging this into the equation yields:
+
+\[\frac{(x_1, y_1)}{||(x_1,y_1)|| + 1} = \frac{(x_2, y_2)}{||(x_1,y_1)|| + 1}\]
+
+Evaluating the $x$ and $y$ terms separately, it is clear that in order for that to hold, it must be the case that $x_1 = x_2$ and $y_1 = y_2$. Therefore, this function is one to one, as desired. This also makes sense if we think about it topologically speaking -- every arbitrary neighborhood of points on the sphere should correspond to an open plane. 
+
+2. This is onto, suppose we have some point in the output, we know it has to map back into the input because of the way that we have defined our homeomorphism. Any point in $\mathbb{R}$ will map back to it's corresponding spot within any arbitrary neighborhood of points.
+
+3. Finally, this function is continuous. There is no value that could make it non continuous.
+% TODO is there a better way to prove continuity 
 
 
 
